@@ -11,7 +11,7 @@ jobs:
         with:
           envkey_POSTGRES_USER: "postgres"
           envkey_POSTGRES_PASSWORD: "postgres"
-          envkey_POSTGRES_DB: "students_live"
+          envkey_POSTGRES_DB: "passwords"
           envkey_DATABASE_URL: "postgresql://postgres:postgres@postgres:5432/passwords"
           directory: back-end
           file_name: .env.test
