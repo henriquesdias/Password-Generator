@@ -4,12 +4,13 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
-
 COPY . .
-
+RUN npm i
 RUN npm run build
 
-EXPOSE 4173 
+RUN mkdir -p /var/www/html
+RUN mv dist/* /var/www/html
 
-CMD ["npm", "run", "preview"]
+WORKDIR /
+
+RUN rm -rf /app
